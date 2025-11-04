@@ -11,6 +11,10 @@ public class Target : MonoBehaviour
 
     public ParticleSystem DestroyedEffect;
 
+    [Header("Enemy Drops")]
+    public GameObject ammoDrop;
+
+
     [Header("Audio")]
     public RandomPlayer HitPlayer;
     public AudioSource IdleSource;
