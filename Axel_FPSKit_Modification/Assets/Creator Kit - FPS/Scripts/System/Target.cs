@@ -1,6 +1,5 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using System.Numerics;
 using UnityEngine;
 using Vector3 = UnityEngine.Vector3;
 
@@ -51,6 +50,11 @@ public class Target : MonoBehaviour
 
         Vector3 position = transform.position;
         
+        if (ammoDrop != null)
+        {
+            Instantiate(ammoDrop, position, Quaternion.identity);
+        }
+
         //the audiosource of the target will get destroyed, so we need to grab a world one and play the clip through it
         if (HitPlayer != null)
         {
